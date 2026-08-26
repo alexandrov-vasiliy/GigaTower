@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8965818064859022334
 Transform:
   m_ObjectHideFlags: 0
@@ -48,7 +48,7 @@ MeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1627534225581503302}
-  m_Enabled: 0
+  m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -226,8 +226,8 @@ MonoBehaviour:
   DebugActive: 0
   InScriptDrivenPause: 0
   FeedbacksList:
-  - rid: 8265003143061045462
-  - rid: 8265003143061045463
+  - rid: 1659427258462372430
+  - rid: 1659427258462372431
   KeepPlayModeChanges: 0
   PerformanceMode: 0
   RestoreInitialValuesOnDisable: 0
@@ -239,11 +239,11 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
-    - rid: 8265003143061045462
+    - rid: 1659427258462372430
       type: {class: MMF_AudioSource, ns: MoreMountains.Feedbacks, asm: MoreMountains.Tools}
       data:
         Active: 1
-        UniqueID: -1020097008
+        UniqueID: -1917939455
         Label: AudioSource
         OriginalLabel: AudioSource
         ChannelMode: 0
@@ -260,7 +260,7 @@ MonoBehaviour:
           NumberOfRepeats: 0
           RepeatForever: 0
           DelayBetweenRepeats: 1
-          PlayCount: 0
+          PlayCount: 18
           LimitPlayCount: 0
           MaxPlayCount: 3
           SetPlayCountToZeroOnReset: 0
@@ -315,27 +315,17 @@ MonoBehaviour:
         DebugActive: 0
         TargetAudioSource: {fileID: 3366139152198611912}
         Mode: 0
-        RandomSfx:
-        - {fileID: 8300000, guid: 429adddfb3d6d2a4e8c13e0a2f40b76c, type: 3}
-        - {fileID: 8300000, guid: 98401dd29e1efa94897fccbcdbbfb4fe, type: 3}
-        - {fileID: 8300000, guid: 03b64312c7327cf4d8c6470c11ada2cc, type: 3}
-        - {fileID: 8300000, guid: 85b31250787b9444ca7cfd5dbe5b5213, type: 3}
-        - {fileID: 8300000, guid: dfa744ed557414c4294620721748e5ef, type: 3}
-        - {fileID: 8300000, guid: 932b2c2dbf0cfb34c9ee27ef74157fca, type: 3}
-        - {fileID: 8300000, guid: 7e690b37fff157e46aaa10cf7c3da3b7, type: 3}
-        - {fileID: 8300000, guid: 7686fc229a855604285930fa9825fc80, type: 3}
-        - {fileID: 8300000, guid: 753fa33b7f6f1fb4f9962beea1e0e1a3, type: 3}
-        - {fileID: 8300000, guid: b7976d94497e0704880155be20ae1cd5, type: 3}
+        RandomSfx: []
         MinVolume: 1
         MaxVolume: 1
         MinPitch: 2
         MaxPitch: 3
         SfxAudioMixerGroup: {fileID: -3165942800488051908, guid: 7e984f512e89b60468e829489e8883e3, type: 2}
-    - rid: 8265003143061045463
+    - rid: 1659427258462372431
       type: {class: MMF_CinemachineImpulse, ns: MoreMountains.FeedbacksForThirdParty, asm: MoreMountains.Tools}
       data:
         Active: 1
-        UniqueID: 244013300
+        UniqueID: 802065329
         Label: Cinemachine Impulse
         OriginalLabel: Cinemachine Impulse
         ChannelMode: 0
@@ -352,7 +342,7 @@ MonoBehaviour:
           NumberOfRepeats: 0
           RepeatForever: 0
           DelayBetweenRepeats: 1
-          PlayCount: 0
+          PlayCount: 18
           LimitPlayCount: 0
           MaxPlayCount: 3
           SetPlayCountToZeroOnReset: 0
@@ -445,7 +435,7 @@ MonoBehaviour:
           DissipationMode: 2
           DissipationDistance: 100
           PropagationSpeed: 343
-        Velocity: {x: 0, y: -0.74, z: 0}
+        Velocity: {x: 0, y: -0.12, z: 0}
         ClearImpulseOnStop: 0
         DrawGizmos: 0
 --- !u!82 &3366139152198611912
@@ -459,7 +449,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 429adddfb3d6d2a4e8c13e0a2f40b76c, type: 3}
+  m_Resource: {fileID: 8300000, guid: e42949dc53de5b147924dd6c24f3c949, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 2.5864577
@@ -1928,6 +1918,7 @@ GameObject:
   - component: {fileID: 6515753972341548347}
   - component: {fileID: 8558579395524713130}
   - component: {fileID: 1356739252682551908}
+  - component: {fileID: 7120286795749561544}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -1958,7 +1949,6 @@ Transform:
   - {fileID: 8707987180425611742}
   - {fileID: 6796249870117996912}
   - {fileID: 7726350999985738647}
-  - {fileID: 4986282744068264789}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!143 &177822096263091595
@@ -2201,96 +2191,19 @@ MonoBehaviour:
   idleIntensity: 1
   sprintSpeedRatio: 1.5
   sprintIntensityMultiplier: 1.35
---- !u!1 &5625473937486814187
-GameObject:
+--- !u!114 &7120286795749561544
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4986282744068264789}
-  - component: {fileID: 9123899259401443314}
-  - component: {fileID: 6944052656552452028}
-  m_Layer: 8
-  m_Name: Capsule
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4986282744068264789
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5625473937486814187}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 3733588659454246221}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &9123899259401443314
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5625473937486814187}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6944052656552452028
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5625473937486814187}
+  m_GameObject: {fileID: 4338075514349873901}
   m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RayTracingAccelStructBuildFlagsOverride: 0
-  m_RayTracingAccelStructBuildFlags: 1
-  m_SmallMeshCulling: 1
-  m_ForceMeshLod: -1
-  m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_MaskInteraction: 0
-  m_AdditionalVertexStreams: {fileID: 0}
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e88afa15a4b0c4c42afbbf7d80666b41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FogObstacle
+  radius: 1.5
 --- !u!1 &5888927276432096373
 GameObject:
   m_ObjectHideFlags: 0
@@ -2604,16 +2517,16 @@ MonoBehaviour:
         TargetAudioSource: {fileID: 8029205777108510481}
         Mode: 0
         RandomSfx:
-        - {fileID: 8300000, guid: 429adddfb3d6d2a4e8c13e0a2f40b76c, type: 3}
-        - {fileID: 8300000, guid: 98401dd29e1efa94897fccbcdbbfb4fe, type: 3}
-        - {fileID: 8300000, guid: 03b64312c7327cf4d8c6470c11ada2cc, type: 3}
-        - {fileID: 8300000, guid: 85b31250787b9444ca7cfd5dbe5b5213, type: 3}
-        - {fileID: 8300000, guid: dfa744ed557414c4294620721748e5ef, type: 3}
-        - {fileID: 8300000, guid: 932b2c2dbf0cfb34c9ee27ef74157fca, type: 3}
-        - {fileID: 8300000, guid: 7e690b37fff157e46aaa10cf7c3da3b7, type: 3}
-        - {fileID: 8300000, guid: 7686fc229a855604285930fa9825fc80, type: 3}
-        - {fileID: 8300000, guid: 753fa33b7f6f1fb4f9962beea1e0e1a3, type: 3}
-        - {fileID: 8300000, guid: b7976d94497e0704880155be20ae1cd5, type: 3}
+        - {fileID: 8300000, guid: b634d17ccea5aa749b87a48681122b88, type: 3}
+        - {fileID: 8300000, guid: d7b9a33c1a41230438311a7957d6c402, type: 3}
+        - {fileID: 8300000, guid: 58b5f320e8e563441b3abbe91b42a70d, type: 3}
+        - {fileID: 8300000, guid: 4d8c3e4ba40fcb149891763062244929, type: 3}
+        - {fileID: 8300000, guid: 3056523074ab1484a83c7ac1100c385f, type: 3}
+        - {fileID: 8300000, guid: 1d428ee45a0cb6a4bb60f65c00af41a6, type: 3}
+        - {fileID: 8300000, guid: 43ca33c169383cf4ebf5f8ca769b7172, type: 3}
+        - {fileID: 8300000, guid: 9de65f2748a96d7408e61b6ac199c2af, type: 3}
+        - {fileID: 8300000, guid: 4297183e445992e4890a3f04708c7450, type: 3}
+        - {fileID: 8300000, guid: 7a23be7740cc0cb48b4ce72c6d8fac80, type: 3}
         MinVolume: 0.2
         MaxVolume: 0.4
         MinPitch: 0.8
@@ -2756,8 +2669,16 @@ PrefabInstance:
     m_TransformParent: {fileID: 3733588659454246221}
     m_Modifications:
     - target: {fileID: 2515567875105394825, guid: adb4b4791159bea41baaaa2c6dd579aa, type: 3}
+      propertyPath: m_ControllerManager.Controllers.Array.data[0].Input.Gain
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 2515567875105394825, guid: adb4b4791159bea41baaaa2c6dd579aa, type: 3}
       propertyPath: m_ControllerManager.Controllers.Array.data[0].InputValue
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2515567875105394825, guid: adb4b4791159bea41baaaa2c6dd579aa, type: 3}
+      propertyPath: m_ControllerManager.Controllers.Array.data[1].Input.Gain
+      value: -11
       objectReference: {fileID: 0}
     - target: {fileID: 2515567875105394825, guid: adb4b4791159bea41baaaa2c6dd579aa, type: 3}
       propertyPath: m_ControllerManager.Controllers.Array.data[1].InputValue
