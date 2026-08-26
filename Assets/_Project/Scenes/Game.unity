@@ -3383,13 +3383,77 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 11.42
       objectReference: {fileID: 0}
+    - target: {fileID: -5477749408508380018, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.63
+      objectReference: {fileID: 0}
+    - target: {fileID: -5477749408508380018, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.73
+      objectReference: {fileID: 0}
+    - target: {fileID: -3542852092398272455, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.216652
+      objectReference: {fileID: 0}
+    - target: {fileID: -3542852092398272455, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.1272675
+      objectReference: {fileID: 0}
+    - target: {fileID: -3274006528333456403, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.933066
+      objectReference: {fileID: 0}
+    - target: {fileID: -3274006528333456403, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.8934426
+      objectReference: {fileID: 0}
     - target: {fileID: -3195828791156449804, guid: f5527463337291445958307aca389365, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d51583566a4f32045b3a5e15b498621d, type: 2}
+    - target: {fileID: -2484921068739079471, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 6.291081
+      objectReference: {fileID: 0}
+    - target: {fileID: -2484921068739079471, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.7357836
+      objectReference: {fileID: 0}
+    - target: {fileID: -2093772787462966335, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 21.687277
+      objectReference: {fileID: 0}
+    - target: {fileID: -2093772787462966335, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.7177792
+      objectReference: {fileID: 0}
+    - target: {fileID: -1255605710908113952, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.216652
+      objectReference: {fileID: 0}
+    - target: {fileID: -1255605710908113952, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -1.1272675
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f5527463337291445958307aca389365, type: 3}
       propertyPath: m_Name
       value: village_blocks
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306643203051859313, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.216652
+      objectReference: {fileID: 0}
+    - target: {fileID: 4306643203051859313, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.8944674
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865064391339405807, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 20.216652
+      objectReference: {fileID: 0}
+    - target: {fileID: 4865064391339405807, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.894469
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
