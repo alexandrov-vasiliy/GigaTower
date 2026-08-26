@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 /// <summary>
@@ -8,6 +9,8 @@ using UnityEngine;
 [RequireComponent(typeof(GroundMovement))]
 public sealed class FirstPersonMovement : MonoBehaviour
 {
+    public event Action GroundJumped;
+
     [SerializeField] private PlayerMovementInput movementInput;
     [SerializeField] private SprintAbility sprintAbility;
     [SerializeField] private JumpAbility jumpAbility;
@@ -75,6 +78,9 @@ public sealed class FirstPersonMovement : MonoBehaviour
         }
 
         bool groundJumpRequested = CanUseJump(jumpRequested, characterController.isGrounded);
+        if (groundJumpRequested)
+            GroundJumped?.Invoke();
+
         float groundSpeedMultiplier = GetGroundSpeedMultiplier(moveInput, deltaTime);
         Vector3 groundVelocity = groundMovement.CalculateVelocity(
             moveInput,

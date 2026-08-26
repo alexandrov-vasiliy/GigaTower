@@ -42,8 +42,10 @@ Flow: movement abilities spend `PlayerStamina` -> stamina events -> `StaminaView
 - `Player/StaminaView.cs` — Slider/CanvasGroup presenter and tween ownership.
 - `Player/Hands/HandsBobbing.cs` — first-person hand idle/movement/sprint bob driven by controller velocity.
 - `Player/Movement/Presentation/DistanceStepFeedbackCycle.cs` — distance-based step cadence.
-- `Player/Movement/Presentation/FirstPersonFootstepFeedbackPlayer.cs` — footstep feedback integration.
-- `Player/Movement/Presentation/FirstPersonLandingFeedbackPlayer.cs` — landing feedback integration.
+- `Player/Movement/Presentation/FirstPersonFootstepFeedbackPlayer.cs` — distance-based player footstep event source.
+- `Player/Movement/Presentation/FirstPersonJumpFeedbackPlayer.cs` — successful ground-jump event adapter.
+- `Player/Movement/Presentation/FirstPersonLandingFeedbackPlayer.cs` — physical landing event source and fall-threshold tracking.
+- `Player/Movement/Presentation/SurfaceFeedbackPlayer.cs` — entity-owned `SurfaceType + event` routing to FEEL, with Earth fallback and optional common feedbacks.
 - `Player/Movement/Presentation/MovementCameraTilt.cs` — movement camera tilt presentation.
 
 ### Interaction
@@ -56,6 +58,7 @@ Flow: Input System callback -> `PlayerInteractionInput` one-shot request -> `Fir
 
 ### Environment
 
+- `Surfaces/SurfaceType.cs`, `Surface.cs`, and `SurfaceDetector.cs` — semantic Earth/Wood identity and reusable ground-contact detection; world surfaces contain identity only while entities own reactions.
 - `Env/Fog/source/FogSimulation.cs` and `FogObstacle.cs` — compute-shader fog density simulation around the player and registered obstacles.
 - `Env/Sky/Mesh/SkyRotator.cs` — looping DOTween sky rotation.
 - `Env` also contains environment models, materials, textures, trees, fog shaders, and sky prefabs used by the scene.

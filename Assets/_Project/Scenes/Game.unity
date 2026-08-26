@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 24799039}
   - component: {fileID: 24799038}
   - component: {fileID: 24799037}
+  - component: {fileID: 24799040}
   m_Layer: 0
   m_Name: Terrain_(80.30, 1.61, -275.80)
   m_TagString: Untagged
@@ -212,6 +213,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &24799040
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 24799036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!1 &54362115
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,6 +237,7 @@ GameObject:
   - component: {fileID: 54362118}
   - component: {fileID: 54362117}
   - component: {fileID: 54362116}
+  - component: {fileID: 54362119}
   m_Layer: 0
   m_Name: Terrain_(-141.70, 1.61, 57.20)
   m_TagString: Untagged
@@ -305,6 +320,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &54362119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54362115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!1 &176464169
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,6 +437,7 @@ GameObject:
   - component: {fileID: 239405916}
   - component: {fileID: 239405915}
   - component: {fileID: 239405914}
+  - component: {fileID: 239405917}
   m_Layer: 0
   m_Name: Terrain_(-30.70, 1.61, -275.80)
   m_TagString: Untagged
@@ -491,6 +520,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &239405917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 239405913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!64 &280108490
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -524,7 +566,8 @@ GameObject:
   - component: {fileID: 295962920}
   - component: {fileID: 295962922}
   - component: {fileID: 295962921}
-  m_Layer: 0
+  - component: {fileID: 295962923}
+  m_Layer: 6
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -606,6 +649,19 @@ Terrain:
   m_EnableHeightmapRayTracing: 1
   m_EnableTreesAndDetailsRayTracing: 0
   m_TreeMotionVectorModeOverride: 3
+--- !u!114 &295962923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 295962919}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!1001 &297641349
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -654,9 +710,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 1.441
       objectReference: {fileID: 0}
+    - target: {fileID: -8585072864060760136, guid: 116d2577e186b67479c65ff6f3de3fa8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 116d2577e186b67479c65ff6f3de3fa8, type: 3}
       propertyPath: m_Name
       value: house_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 116d2577e186b67479c65ff6f3de3fa8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2279369579025843343, guid: 116d2577e186b67479c65ff6f3de3fa8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -666,13 +730,20 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 5c6bfbc5e1001aa4491280a0413196c5, type: 2}
+    - target: {fileID: 7304813132075580939, guid: 116d2577e186b67479c65ff6f3de3fa8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 116d2577e186b67479c65ff6f3de3fa8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1819711247}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 116d2577e186b67479c65ff6f3de3fa8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2070045611}
   m_SourcePrefab: {fileID: 100100000, guid: 116d2577e186b67479c65ff6f3de3fa8, type: 3}
 --- !u!1 &329244169
 GameObject:
@@ -685,6 +756,7 @@ GameObject:
   - component: {fileID: 329244172}
   - component: {fileID: 329244171}
   - component: {fileID: 329244170}
+  - component: {fileID: 329244173}
   m_Layer: 0
   m_Name: Terrain_(191.30, 1.61, -53.80)
   m_TagString: Untagged
@@ -767,6 +839,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &329244173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329244169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!1 &396755357
 GameObject:
   m_ObjectHideFlags: 0
@@ -777,7 +862,7 @@ GameObject:
   m_Component:
   - component: {fileID: 396755358}
   - component: {fileID: 396755359}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: body (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -958,6 +1043,7 @@ GameObject:
   - component: {fileID: 427524259}
   - component: {fileID: 427524258}
   - component: {fileID: 427524257}
+  - component: {fileID: 427524260}
   m_Layer: 0
   m_Name: Terrain_(80.30, 1.61, -164.80)
   m_TagString: Untagged
@@ -1040,6 +1126,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &427524260
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 427524256}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!64 &431634043
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1073,6 +1172,7 @@ GameObject:
   - component: {fileID: 447444019}
   - component: {fileID: 447444018}
   - component: {fileID: 447444017}
+  - component: {fileID: 447444020}
   m_Layer: 0
   m_Name: Terrain_(191.30, 1.61, 57.20)
   m_TagString: Untagged
@@ -1155,6 +1255,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &447444020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 447444016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!64 &466700452
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1188,6 +1301,7 @@ GameObject:
   - component: {fileID: 474670536}
   - component: {fileID: 474670535}
   - component: {fileID: 474670534}
+  - component: {fileID: 474670537}
   m_Layer: 0
   m_Name: Terrain_(80.30, 1.61, 57.20)
   m_TagString: Untagged
@@ -1270,6 +1384,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &474670537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 474670533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!64 &561879696
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1325,6 +1452,7 @@ GameObject:
   - component: {fileID: 663190831}
   - component: {fileID: 663190830}
   - component: {fileID: 663190829}
+  - component: {fileID: 663190832}
   m_Layer: 0
   m_Name: Terrain_(-141.70, 1.61, -164.80)
   m_TagString: Untagged
@@ -1407,6 +1535,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &663190832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 663190828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!64 &698545748
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1467,6 +1608,7 @@ GameObject:
   - component: {fileID: 814910047}
   - component: {fileID: 814910046}
   - component: {fileID: 814910045}
+  - component: {fileID: 814910048}
   m_Layer: 0
   m_Name: Terrain_(-141.70, 1.61, -275.80)
   m_TagString: Untagged
@@ -1549,6 +1691,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &814910048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814910044}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!1 &817872336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1770,6 +1925,7 @@ GameObject:
   - component: {fileID: 964069467}
   - component: {fileID: 964069466}
   - component: {fileID: 964069465}
+  - component: {fileID: 964069468}
   m_Layer: 0
   m_Name: Terrain_(-30.70, 1.61, 57.20)
   m_TagString: Untagged
@@ -1852,6 +2008,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &964069468
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964069464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!1 &979087729
 GameObject:
   m_ObjectHideFlags: 0
@@ -1862,7 +2031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 979087730}
   - component: {fileID: 979087731}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: body (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1916,6 +2085,7 @@ GameObject:
   - component: {fileID: 1026289761}
   - component: {fileID: 1026289760}
   - component: {fileID: 1026289759}
+  - component: {fileID: 1026289762}
   m_Layer: 0
   m_Name: Terrain_(-141.70, 1.61, -386.80)
   m_TagString: Untagged
@@ -1998,6 +2168,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1026289762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026289758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!1001 &1104685137
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2006,13 +2189,33 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 523705028141024879, guid: 0ffc2909a50fe614d9579ec39c9bbb4b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159288425236371709, guid: 0ffc2909a50fe614d9579ec39c9bbb4b, type: 3}
+      propertyPath: commonLandingFeedback
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1159288425236371709, guid: 0ffc2909a50fe614d9579ec39c9bbb4b, type: 3}
+      propertyPath: commonFootstepFeedback
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3281051901368868570, guid: 0ffc2909a50fe614d9579ec39c9bbb4b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1600037
+      objectReference: {fileID: 0}
+    - target: {fileID: 3366139152198611912, guid: 0ffc2909a50fe614d9579ec39c9bbb4b, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: d6d959eb1799a164e9302e486da0982a, type: 3}
     - target: {fileID: 3733588659454246221, guid: 0ffc2909a50fe614d9579ec39c9bbb4b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 36.1
       objectReference: {fileID: 0}
     - target: {fileID: 3733588659454246221, guid: 0ffc2909a50fe614d9579ec39c9bbb4b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 101.15
+      value: 101.67
       objectReference: {fileID: 0}
     - target: {fileID: 3733588659454246221, guid: 0ffc2909a50fe614d9579ec39c9bbb4b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2046,9 +2249,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4251755129959652087, guid: 0ffc2909a50fe614d9579ec39c9bbb4b, type: 3}
+      propertyPath: managedReferences[1659427258462372430].MaxPitch
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 4251755129959652087, guid: 0ffc2909a50fe614d9579ec39c9bbb4b, type: 3}
+      propertyPath: managedReferences[1659427258462372430].MinPitch
+      value: 0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273669722556794861, guid: 0ffc2909a50fe614d9579ec39c9bbb4b, type: 3}
+      propertyPath: managedReferences[1659427258462372430].MaxPitch
+      value: 0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4273669722556794861, guid: 0ffc2909a50fe614d9579ec39c9bbb4b, type: 3}
+      propertyPath: managedReferences[1659427258462372430].MinPitch
+      value: 0.86
+      objectReference: {fileID: 0}
     - target: {fileID: 4338075514349873901, guid: 0ffc2909a50fe614d9579ec39c9bbb4b, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4391995719473313710, guid: 0ffc2909a50fe614d9579ec39c9bbb4b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.1600037
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2066,6 +2289,7 @@ GameObject:
   - component: {fileID: 1196781787}
   - component: {fileID: 1196781786}
   - component: {fileID: 1196781785}
+  - component: {fileID: 1196781788}
   m_Layer: 0
   m_Name: Terrain_(191.30, 1.61, -386.80)
   m_TagString: Untagged
@@ -2148,6 +2372,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1196781788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196781784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!1 &1235260395
 GameObject:
   m_ObjectHideFlags: 0
@@ -2194,6 +2431,7 @@ GameObject:
   - component: {fileID: 1250270694}
   - component: {fileID: 1250270693}
   - component: {fileID: 1250270692}
+  - component: {fileID: 1250270695}
   m_Layer: 0
   m_Name: Terrain_(-141.70, 1.61, -53.80)
   m_TagString: Untagged
@@ -2276,6 +2514,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1250270695
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1250270691}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!1 &1266404629
 GameObject:
   m_ObjectHideFlags: 0
@@ -2286,7 +2537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1266404630}
   - component: {fileID: 1266404631}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2508,6 +2759,7 @@ GameObject:
   - component: {fileID: 1381247626}
   - component: {fileID: 1381247625}
   - component: {fileID: 1381247624}
+  - component: {fileID: 1381247627}
   m_Layer: 0
   m_Name: Terrain_(191.30, 1.61, -164.80)
   m_TagString: Untagged
@@ -2590,6 +2842,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1381247627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1381247623}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!64 &1454764536
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2645,6 +2910,7 @@ GameObject:
   - component: {fileID: 1537673376}
   - component: {fileID: 1537673375}
   - component: {fileID: 1537673374}
+  - component: {fileID: 1537673377}
   m_Layer: 0
   m_Name: Terrain_(191.30, 1.61, -275.80)
   m_TagString: Untagged
@@ -2727,6 +2993,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1537673377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1537673373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!64 &1559850506
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2749,6 +3028,19 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7807538432633192378, guid: f5527463337291445958307aca389365, type: 3}
+--- !u!114 &1587728497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1990064579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 1
 --- !u!1 &1660580974
 GameObject:
   m_ObjectHideFlags: 0
@@ -2760,6 +3052,7 @@ GameObject:
   - component: {fileID: 1660580977}
   - component: {fileID: 1660580976}
   - component: {fileID: 1660580975}
+  - component: {fileID: 1660580978}
   m_Layer: 0
   m_Name: Terrain_(-30.70, 1.61, -386.80)
   m_TagString: Untagged
@@ -2842,6 +3135,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1660580978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660580974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!1 &1664205316
 GameObject:
   m_ObjectHideFlags: 0
@@ -2853,6 +3159,7 @@ GameObject:
   - component: {fileID: 1664205319}
   - component: {fileID: 1664205318}
   - component: {fileID: 1664205317}
+  - component: {fileID: 1664205320}
   m_Layer: 0
   m_Name: Terrain_(80.30, 1.61, -386.80)
   m_TagString: Untagged
@@ -2935,6 +3242,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1664205320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664205316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!1 &1669978487
 GameObject:
   m_ObjectHideFlags: 0
@@ -2946,6 +3266,7 @@ GameObject:
   - component: {fileID: 1669978490}
   - component: {fileID: 1669978489}
   - component: {fileID: 1669978488}
+  - component: {fileID: 1669978491}
   m_Layer: 0
   m_Name: Terrain_(-30.70, 1.61, -164.80)
   m_TagString: Untagged
@@ -3028,6 +3349,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1669978491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1669978487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!64 &1720391592
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -3176,7 +3510,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1819711247}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Colliders
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3218,7 +3552,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1903108045}
   - component: {fileID: 1903108046}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: body (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3368,8 +3702,16 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8578433623609224457, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8578433623609224457, guid: f5527463337291445958307aca389365, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8391222552659086748, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -8035857614479882688, guid: f5527463337291445958307aca389365, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3382,6 +3724,26 @@ PrefabInstance:
     - target: {fileID: -8035857614479882688, guid: f5527463337291445958307aca389365, type: 3}
       propertyPath: m_LocalPosition.z
       value: 11.42
+      objectReference: {fileID: 0}
+    - target: {fileID: -7640558969779515294, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -7271449666460269675, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -7146521406498821007, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -6763858364670572316, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -5568371526223589888, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -5477749408508380018, guid: f5527463337291445958307aca389365, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3427,6 +3789,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -3.7177792
       objectReference: {fileID: 0}
+    - target: {fileID: -2045257923548263128, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1599826595754709761, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1332352919480943004, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: -1255605710908113952, guid: f5527463337291445958307aca389365, type: 3}
       propertyPath: m_LocalPosition.y
       value: 20.216652
@@ -3435,9 +3809,33 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -1.1272675
       objectReference: {fileID: 0}
+    - target: {fileID: -516098083770646512, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -466329591000292508, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -208595431880416365, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 281855664364225751, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f5527463337291445958307aca389365, type: 3}
       propertyPath: m_Name
       value: village_blocks
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3266251763826766858, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4306643203051859313, guid: f5527463337291445958307aca389365, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3454,6 +3852,30 @@ PrefabInstance:
     - target: {fileID: 4865064391339405807, guid: f5527463337291445958307aca389365, type: 3}
       propertyPath: m_LocalPosition.z
       value: -6.894469
+      objectReference: {fileID: 0}
+    - target: {fileID: 6741692793215712667, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8009987137999418058, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8416272007918961125, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485173162082002552, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8513859187771203891, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 8700725330082129686, guid: f5527463337291445958307aca389365, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects:
@@ -3503,6 +3925,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8485173162082002552, guid: f5527463337291445958307aca389365, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1725373173}
+    - targetCorrespondingSourceObject: {fileID: 8485173162082002552, guid: f5527463337291445958307aca389365, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1587728497}
     - targetCorrespondingSourceObject: {fileID: -7271449666460269675, guid: f5527463337291445958307aca389365, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1559850506}
@@ -3739,11 +4164,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FogObstacle
   radius: 22.81
+--- !u!1 &2070045609 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 116d2577e186b67479c65ff6f3de3fa8, type: 3}
+  m_PrefabInstance: {fileID: 297641349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2070045610 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 116d2577e186b67479c65ff6f3de3fa8, type: 3}
   m_PrefabInstance: {fileID: 297641349}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2070045611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070045609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 1
 --- !u!1 &2093836769
 GameObject:
   m_ObjectHideFlags: 0
@@ -3755,6 +4198,7 @@ GameObject:
   - component: {fileID: 2093836772}
   - component: {fileID: 2093836771}
   - component: {fileID: 2093836770}
+  - component: {fileID: 2093836773}
   m_Layer: 0
   m_Name: Terrain_(80.30, 1.61, -53.80)
   m_TagString: Untagged
@@ -3837,6 +4281,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 176464170}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2093836773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093836769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 445dcb73fe3001c4191c0d6d0833f1c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Surface
+  <Type>k__BackingField: 0
 --- !u!1 &2109837845
 GameObject:
   m_ObjectHideFlags: 0
@@ -3847,7 +4304,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2109837846}
   - component: {fileID: 2109837847}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: body (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4031,6 +4488,6 @@ SceneRoots:
   m_Roots:
   - {fileID: 410087041}
   - {fileID: 832575519}
-  - {fileID: 1104685137}
   - {fileID: 878747621}
   - {fileID: 187627048}
+  - {fileID: 1104685137}

@@ -1,19 +1,18 @@
-using MoreMountains.Feedbacks;
 using UnityEngine;
 
 /// <summary>
-/// Landing feedback trigger for the first-person player. It observes the required CharacterController after FirstPersonMovement has applied movement, tracks airborne time, downward speed, and drop height, then calls the configured MMF_Player.PlayFeedbacks when the player lands from a jump or fall that passes the configured thresholds.
+/// Landing trigger for the first-person player. It tracks airborne time, downward speed, and drop height, then forwards qualifying physical contacts to the entity's surface feedback player.
 /// </summary>
 [RequireComponent(typeof(CharacterController))]
+[RequireComponent(typeof(SurfaceFeedbackPlayer))]
 public sealed class FirstPersonLandingFeedbackPlayer : MonoBehaviour
 {
-    [SerializeField] private MMF_Player landingFeedback;
     [SerializeField, Min(0f)] private float minimumAirTime = 0.15f;
     [SerializeField, Min(0f)] private float minimumDownwardSpeed = 2f;
     [SerializeField, Min(0f)] private float minimumFallDistance = 0.25f;
-    [SerializeField] private bool playAtPlayerPosition = true;
 
     private CharacterController characterController;
+    private SurfaceFeedbackPlayer feedbackPlayer;
     private bool wasGrounded;
     private float airborneTime;
     private float highestAirborneY;
@@ -22,6 +21,7 @@ public sealed class FirstPersonLandingFeedbackPlayer : MonoBehaviour
     private void Awake()
     {
         characterController = GetComponent<CharacterController>();
+        feedbackPlayer = GetComponent<SurfaceFeedbackPlayer>();
         wasGrounded = characterController != null && characterController.isGrounded;
         ResetAirborneState();
     }
@@ -41,7 +41,7 @@ public sealed class FirstPersonLandingFeedbackPlayer : MonoBehaviour
         }
 
         if (!wasGrounded && ShouldPlayLandingFeedback())
-            PlayLanding();
+            feedbackPlayer.PlayLanding(fastestDownwardSpeed);
 
         ResetAirborneState();
         wasGrounded = true;
@@ -69,7 +69,7 @@ public sealed class FirstPersonLandingFeedbackPlayer : MonoBehaviour
 
     private bool ShouldPlayLandingFeedback()
     {
-        if (landingFeedback == null || airborneTime < minimumAirTime)
+        if (airborneTime < minimumAirTime)
             return false;
 
         float fallDistance = Mathf.Max(0f, highestAirborneY - transform.position.y);
@@ -84,11 +84,4 @@ public sealed class FirstPersonLandingFeedbackPlayer : MonoBehaviour
         fastestDownwardSpeed = 0f;
     }
 
-    private void PlayLanding()
-    {
-        if (playAtPlayerPosition)
-            landingFeedback.PlayFeedbacks(transform.position);
-        else
-            landingFeedback.PlayFeedbacks();
-    }
 }
