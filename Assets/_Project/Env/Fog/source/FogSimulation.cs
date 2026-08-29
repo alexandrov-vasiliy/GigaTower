@@ -5,6 +5,7 @@ public class FogSimulation : MonoBehaviour {
     #region Fields
     [SerializeField] ComputeShader compute;
     [SerializeField] Material fogMaterial;
+    [SerializeField] Texture initialDensity;
     [SerializeField] Transform player;
     [SerializeField] int resolution = 256;
     [SerializeField] float areaSize = 30f;
@@ -24,7 +25,13 @@ public class FogSimulation : MonoBehaviour {
     }
     
     ComputeBuffer obstacleBuffer;
+    static readonly int DensityTex = Shader.PropertyToID("_DensityTex");
     #endregion
+
+    void OnValidate() {
+        if (!Application.isPlaying && fogMaterial != null)
+            fogMaterial.SetTexture(DensityTex, initialDensity);
+    }
 
     void Start() {
         kernel = compute.FindKernel("CSMain");
@@ -37,13 +44,17 @@ public class FogSimulation : MonoBehaviour {
                 wrapMode = TextureWrapMode.Clamp
             };
             density[i].Create();
+            if (initialDensity != null) Graphics.Blit(initialDensity, density[i]);
         }
         
         previousPlayerPos = player.position;
         InitializeObstacles();
         
-        // Prime the field so we start with fully grown fog instead of an empty texture
-        for (int i = 0; i < 90; i++) Step(0.1f);
+        if (initialDensity != null)
+            fogMaterial.SetTexture(DensityTex, density[current]);
+        else
+            // Prime the field so we start with fully grown fog instead of an empty texture.
+            for (int i = 0; i < 90; i++) Step(0.1f);
     }
     
     void Update() => Step(Time.deltaTime);
@@ -88,7 +99,7 @@ public class FogSimulation : MonoBehaviour {
         compute.SetTexture(kernel, "Result", density[next]);
         compute.Dispatch(kernel, groups, groups, 1);
         
-        fogMaterial.SetTexture("_DensityTex", density[next]);
+        fogMaterial.SetTexture(DensityTex, density[next]);
         current = next;
         previousPlayerPos = player.position;
     }

@@ -59,7 +59,9 @@ Flow: Input System callback -> `PlayerInteractionInput` one-shot request -> `Fir
 ### Environment
 
 - `Surfaces/SurfaceType.cs`, `Surface.cs`, and `SurfaceDetector.cs` — semantic Earth/Wood identity and reusable ground-contact detection; world surfaces contain identity only while entities own reactions.
-- `Env/Fog/source/FogSimulation.cs` and `FogObstacle.cs` — compute-shader fog density simulation around the player and registered obstacles.
+- `Env/Fog/source/FogSimulation.cs` and `FogObstacle.cs` — compute-shader fog density simulation around the player and registered obstacles, with an inspector-authored initial density texture used for Edit Mode preview and runtime initialization.
+- `Shaders/Water/waterfall.vfx` and `Zowell_Water.shadergraph` — the `RomanLevel` mesh-particle waterfall, using the `Env/RomanLevel/RustyPipe/waterfallmesh01.fbx` flow mesh and animated distortion, ripples, normals, foam, and transparency.
+- `Env/Water/SteamSprayVolume.cs` and `Shaders/Particles/SteamSpray.shader` — reusable `RomanLevel` box-volume steam/spray particles; object scale changes only the emission volume while the component owns density, motion, texture, color, fading, and turbulence.
 - `Env/Sky/Mesh/SkyRotator.cs` — looping DOTween sky rotation.
 - `Env` also contains environment models, materials, textures, trees, fog shaders, and sky prefabs used by the scene.
 

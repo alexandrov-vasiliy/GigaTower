@@ -4,11 +4,13 @@ Shader "GitAmend/FogVolume" {
         _FogColor ("Fog Color", Color) = (0.85, 0.9, 1.0, 1.0)
         _ShadowColor ("Shadow Color", Color) = (0.45, 0.5, 0.62, 1.0)
         _DensityScale ("Density Scale", Range(0, 20)) = 6.0
+        _EdgeFade ("Edge Fade", Range(0, 0.5)) = 0.0
     }
     SubShader {
         Tags { "RenderType" = "Transparent" "Queue" = "Transparent" "RenderPipeline" = "UniversalPipeline" }
         Blend One OneMinusSrcAlpha
         ZWrite Off
+        ZTest Always
         Cull Front
         
         Pass {
@@ -16,11 +18,12 @@ Shader "GitAmend/FogVolume" {
             #pragma vertex vert
             #pragma fragment frag
             #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/Core.hlsl"
+            #include "Packages/com.unity.render-pipelines.universal/ShaderLibrary/DeclareDepthTexture.hlsl"
             
             TEXTURE2D(_DensityTex);
             SAMPLER(sampler_DensityTex);
             float4 _FogColor, _ShadowColor;
-            float _DensityScale;
+            float _DensityScale, _EdgeFade;
             
             struct Attributes { float4 positionOS : POSITION; };
             
@@ -51,6 +54,15 @@ Shader "GitAmend/FogVolume" {
                 float3 rd = normalize(input.positionOS - ro);
                 float2 t = BoxIntersect(ro, rd);
                 t.x = max(t.x, 0.0); // camera may be inside the volume
+
+                // The cube's back face can be behind opaque geometry. Render it anyway,
+                // then stop the ray at the visible scene surface so fog covers that surface.
+                float2 screenUv = input.positionCS.xy / _ScaledScreenParams.xy;
+                float sceneDepth = SampleSceneDepth(screenUv);
+                float3 scenePositionWS = ComputeWorldSpacePosition(screenUv, sceneDepth, UNITY_MATRIX_I_VP);
+                float3 scenePositionOS = TransformWorldToObject(scenePositionWS);
+                t.y = min(t.y, dot(scenePositionOS - ro, rd));
+                if (t.y <= t.x) discard;
                 
                 const int stepCount = 16;
                 float stepSize = (t.y - t.x) / stepCount;
@@ -63,6 +75,8 @@ Shader "GitAmend/FogVolume" {
                 [unroll]
                 for (int i = 0; i < stepCount; i++) {
                     float d = SAMPLE_TEXTURE2D_LOD(_DensityTex, sampler_DensityTex, p.xz + 0.5, 0).r;
+                    float edgeDistance = min(0.5 - abs(p.x), 0.5 - abs(p.z));
+                    d *= _EdgeFade > 0.0001 ? smoothstep(0.0, _EdgeFade, edgeDistance) : 1.0;
                     d *= smoothstep(0.5, -0.3, p.y) * _DensityScale; // fog thins toward the top of the slab
                     float a = 1.0 - exp(-d * stepSize);              // Beer-Lambert per step
                     color += lerp(_ShadowColor.rgb, _FogColor.rgb, saturate(p.y + 0.7)) * (a * transmittance);
