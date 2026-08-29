@@ -38,11 +38,15 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _DestortionNoise:
-        m_Texture: {fileID: 2800000, guid: 82bae405057d60346b22b52dcd563295, type: 3}
+        m_Texture: {fileID: 2800000, guid: b9af4d7f64120c04cb071869e42c7198, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NoiseRipple:
-        m_Texture: {fileID: 2800000, guid: fb0d8999fffa946418e0db6e8bf10d2d, type: 3}
+        m_Texture: {fileID: 2800000, guid: 69eaafa0fd959e046b5c12df48b92dfb, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalNoise:
+        m_Texture: {fileID: 2800000, guid: 3a6cb9110bedd5140b50e35fd8d8a8ca, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SampleTexture2D_375b7dbffde9420889b4a1a43e4b6e0b_Texture_1_Texture2D:
@@ -68,24 +72,24 @@ Material:
     m_Ints: []
     m_Floats:
     - _DistortionSpeed: 0.01
-    - _DistortionStrength: 0.07
+    - _DistortionStrength: 0.01
     - _FoamOffset: 2.12
     - _Metallic: 0
-    - _NormalNoiseScale: 200
-    - _NormalStrength: 0.12
+    - _NormalNoiseScale: 32.14
+    - _NormalStrength: 0.01
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _RippleDissolve: 2.01
-    - _RippleSpeed: 0
+    - _RippleDissolve: 3.24
+    - _RippleSpeed: 0.02
     - _Smoothness: 0.5
-    - _Transparancy: 1.98
+    - _Transparancy: 0.01
     - _VertexDistortionSpeed: 0
     m_Colors:
-    - _Color: {r: 0.14901961, g: 0.0981756, b: 0, a: 1}
-    - _Direction: {r: 0, g: -1, b: 0, a: 0}
-    - _FoamColor: {r: 0.0013349948, g: 0.05660379, b: 0.014973295, a: 1}
-    - _NormalSpeed: {r: 1, g: 1, b: 0, a: 0}
-    - _RippleColor: {r: 0.09433961, g: 0.07680166, b: 0.00756497, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _Direction: {r: 1, g: -1, b: 0, a: 0}
+    - _FoamColor: {r: 0.5724902, g: 0.7830189, b: 0.6326413, a: 1}
+    - _NormalSpeed: {r: 0.05, g: 0.003, b: 0, a: 0}
+    - _RippleColor: {r: 0.058873262, g: 0.09604896, b: 0.1981132, a: 1}
     - _RippleScale: {r: 6, g: 6, b: 0, a: 0}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
