@@ -36,6 +36,9 @@
         },
         {
             "m_Id": "4a0d7dd635eb43b9b3eb33ab2d70bb83"
+        },
+        {
+            "m_Id": "9ed851e2a8334e0d92de85b332fcdc9f"
         }
     ],
     "m_Nodes": [
@@ -4538,6 +4541,36 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "9ed851e2a8334e0d92de85b332fcdc9f",
+    "m_Name": "",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "1eee9cc0895d4d6781969404228e62e2"
+        },
+        {
+            "m_Id": "c47537a653dc4eaf898d594a35eb8c73"
+        },
+        {
+            "m_Id": "e6af3b2344884caeb0fd4376a70bcaff"
+        },
+        {
+            "m_Id": "f192920fe23743f1b508415380fe2bc2"
+        },
+        {
+            "m_Id": "46885d4d9537480d8bb346edc7beafdc"
+        },
+        {
+            "m_Id": "b337fcd4ce284dac8de402c44c390ee8"
+        },
+        {
+            "m_Id": "124ff239b57540d69f1651c292a28a8b"
+        }
+    ]
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.Vector2Node",
     "m_ObjectId": "9f0f67f79dfa4b78a28d9410cc5579e6",
     "m_Group": {
@@ -5765,8 +5798,8 @@
     "m_ObjectId": "e514c6e77b9943259681e89c033311fc",
     "m_Title": "03  Perceptual colour / final blend",
     "m_Position": {
-        "x": -45.0,
-        "y": -559.0
+        "x": -45.60003662109375,
+        "y": -560.7999267578125
     }
 }
 
@@ -6005,8 +6038,8 @@
     "m_ObjectId": "ee592c0bb38c4d8c8f9411dd1ec3a0e1",
     "m_Title": "02  Film grain / pixel dither",
     "m_Position": {
-        "x": -2125.0,
-        "y": 421.0
+        "x": -2125.60009765625,
+        "y": 419.2000732421875
     }
 }
 
@@ -6174,8 +6207,8 @@
     "m_ObjectId": "f613df04644642f997ba8e453ab75f33",
     "m_Title": "01  Pixel grid / aspect ratio",
     "m_Position": {
-        "x": -1975.0,
-        "y": -529.0
+        "x": -1975.199951171875,
+        "y": -530.39990234375
     }
 }
 

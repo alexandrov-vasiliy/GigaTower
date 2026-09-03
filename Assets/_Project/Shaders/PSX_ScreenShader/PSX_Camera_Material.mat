@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RomanDream
-  m_Shader: {fileID: -6465566751694194690, guid: 51cfe34c450e1f4488f4e8dce8d29f49, type: 3}
+  m_Name: PSX_Camera_Material
+  m_Shader: {fileID: -6465566751694194690, guid: 7e874748ccfe38e49bc79ae02d97f989, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -37,13 +37,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _ColorSteps: 24
-    - _DitherStrength: 0.663
-    - _GrainSpeed: 12.2
-    - _GrainStrength: 0.0128
-    - _Intensity: 1
-    - _PixelAmount: 0.26
-    - _PixelHeight: 120
+    - _Color_Steps: 64
+    - _Dither_Strength: 0.02
+    - _Pixel_Size: 2
+    - _Scan_Line: 0.06
+    - _Vignette: 0.25
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

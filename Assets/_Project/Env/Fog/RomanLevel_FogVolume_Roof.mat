@@ -126,9 +126,9 @@ Material:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FogColor: {r: 0, g: 0.3679245, b: 0.106027365, a: 1}
+    - _FogColor: {r: 0.018319668, g: 0.3132075, b: 0.1030215, a: 1}
     - _GlowColor: {r: 0.12, g: 0.6, b: 0.32, a: 1}
-    - _ShadowColor: {r: 0.04685831, g: 0.3679245, b: 0.1768922, a: 1}
+    - _ShadowColor: {r: 0.030936256, g: 0.20754719, b: 0.10201139, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1
