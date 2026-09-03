@@ -5,6 +5,10 @@ Shader "GitAmend/FogVolume" {
         _ShadowColor ("Shadow Color", Color) = (0.45, 0.5, 0.62, 1.0)
         _DensityScale ("Density Scale", Range(0, 20)) = 6.0
         _EdgeFade ("Edge Fade", Range(0, 0.5)) = 0.0
+        [Header(Glow)]
+        [ToggleUI] _GlowEnabled ("Glow Enabled", Float) = 0
+        [HDR] _GlowColor ("Glow Color", Color) = (0.12, 0.6, 0.32, 1)
+        _GlowIntensity ("Glow Intensity", Range(0, 20)) = 1
     }
     SubShader {
         Tags { "RenderType" = "Transparent" "Queue" = "Transparent" "RenderPipeline" = "UniversalPipeline" }
@@ -24,6 +28,8 @@ Shader "GitAmend/FogVolume" {
             SAMPLER(sampler_DensityTex);
             float4 _FogColor, _ShadowColor;
             float _DensityScale, _EdgeFade;
+            float4 _GlowColor;
+            float _GlowEnabled, _GlowIntensity;
             
             struct Attributes { float4 positionOS : POSITION; };
             
@@ -84,9 +90,13 @@ Shader "GitAmend/FogVolume" {
                     p += dp;
                 }
                 
-                return half4(color, 1.0 - transmittance);
+                float opacity = 1.0 - transmittance;
+                // Constant emission integrates to opacity: empty space and soft edges stay transparent.
+                color += _GlowColor.rgb * ((_GlowEnabled > 0.5 ? max(_GlowIntensity, 0.0) : 0.0) * opacity);
+                return half4(color, opacity);
             }
             ENDHLSL
         }
     }
 }
+

@@ -835,7 +835,7 @@ PlayerSettings:
     PS4: DOTWEEN;RealtimeCSG;RealtimeCSG_1;RealtimeCSG_1_6;RealtimeCSG_1_6_01
     PS5: DOTWEEN;RealtimeCSG;RealtimeCSG_1;RealtimeCSG_1_6;RealtimeCSG_1_6_01
     QNX: DOTWEEN;RealtimeCSG;RealtimeCSG_1;RealtimeCSG_1_6;RealtimeCSG_1_6_01
-    Standalone: MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED;DOTWEEN;RealtimeCSG;RealtimeCSG_1;RealtimeCSG_1_6;RealtimeCSG_1_6_01
+    Standalone: MOREMOUNTAINS_NICEVIBRATIONS_INSTALLED;DOTWEEN;RealtimeCSG;RealtimeCSG_1;RealtimeCSG_1_6;RealtimeCSG_1_6_01;ALLIN13DSHADER_URP
     VisionOS: DOTWEEN;RealtimeCSG;RealtimeCSG_1;RealtimeCSG_1_6;RealtimeCSG_1_6_01
     WebGL: DOTWEEN;RealtimeCSG;RealtimeCSG_1;RealtimeCSG_1_6;RealtimeCSG_1_6_01
     Windows Store Apps: DOTWEEN

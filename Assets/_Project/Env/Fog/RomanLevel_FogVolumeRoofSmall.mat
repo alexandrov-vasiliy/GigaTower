@@ -106,6 +106,8 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
+    - _GlowEnabled: 0
+    - _GlowIntensity: 1
     - _Metallic: 0
     - _OcclusionStrength: 1
     - _Parallax: 0.005
@@ -125,6 +127,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FogColor: {r: 0, g: 0.3679245, b: 0.106027365, a: 1}
+    - _GlowColor: {r: 0.12, g: 0.6, b: 0.32, a: 1}
     - _ShadowColor: {r: 0.04685831, g: 0.3679245, b: 0.1768922, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
   m_BuildTextureStacks: []
