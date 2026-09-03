@@ -33,6 +33,9 @@
         },
         {
             "m_Id": "b50560d03b5247b6bb0833131856b4e3"
+        },
+        {
+            "m_Id": "4a0d7dd635eb43b9b3eb33ab2d70bb83"
         }
     ],
     "m_Nodes": [
@@ -2585,6 +2588,36 @@
     "m_DefaultValue": 0.0,
     "m_Labels": [],
     "m_LiteralMode": false
+}
+
+{
+    "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "4a0d7dd635eb43b9b3eb33ab2d70bb83",
+    "m_Name": "",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "1eee9cc0895d4d6781969404228e62e2"
+        },
+        {
+            "m_Id": "c47537a653dc4eaf898d594a35eb8c73"
+        },
+        {
+            "m_Id": "e6af3b2344884caeb0fd4376a70bcaff"
+        },
+        {
+            "m_Id": "f192920fe23743f1b508415380fe2bc2"
+        },
+        {
+            "m_Id": "46885d4d9537480d8bb346edc7beafdc"
+        },
+        {
+            "m_Id": "b337fcd4ce284dac8de402c44c390ee8"
+        },
+        {
+            "m_Id": "124ff239b57540d69f1651c292a28a8b"
+        }
+    ]
 }
 
 {

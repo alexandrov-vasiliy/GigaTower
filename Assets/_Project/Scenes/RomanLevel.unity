@@ -424,7 +424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RomanTorchLight
   steps: 6
-  pixelHeight: 297
+  pixelHeight: 114
   strength: 1
 --- !u!114 &78010618
 MonoBehaviour:
