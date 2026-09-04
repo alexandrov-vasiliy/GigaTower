@@ -17,6 +17,12 @@
       },
       "hash": "4ce7dd3cc54e37e2ed6dc59cb5a047f3dccb3f50"
     },
+    "com.texturelab.editor": {
+      "version": "file:com.texturelab.editor",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "com.tripolygon.umodeler-x": {
       "version": "file:../UModelerXPackages/com.tripolygon.umodeler-x-1.2.1+f3.tgz",
       "depth": 0,

@@ -1,0 +1,153 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e18bff48082725c4e8e6876b971cb6a8, type: 3}
+  m_Name: pixelated-grass
+  m_EditorClassIdentifier: TextureLab.Editor::TextureLab.Editor.TextureLabPreset
+  dataVersion: 1
+  effects:
+  - rid: 2250680610667626751
+  - rid: 2250680610667626752
+  - rid: 2250680610667626753
+  - rid: 2250680610667626754
+  - rid: 2250680610667626755
+  - rid: 2250680610667626756
+  - rid: 2250680610667626757
+  - rid: 2250680610667626758
+  - rid: 2250680610667626759
+  references:
+    version: 2
+    RefIds:
+    - rid: 2250680610667626751
+      type: {class: ExposureBrushEffectData, ns: TextureLab.Editor, asm: TextureLab.Editor}
+      data:
+        id: 9c581a91743f4f6abb5b0000c6a5c4ad
+        enabled: 1
+        expanded: 1
+        allowRandomize: 0
+        strokes:
+        - points:
+          - {x: 0.5597485, y: 0.27044025}
+          mode: 0
+          size: 96
+          hardness: 0.35
+          exposure: 0.25
+        - points:
+          - {x: 0.6855346, y: 0.24528316}
+          mode: 0
+          size: 96
+          hardness: 0.35
+          exposure: 0.25
+        - points:
+          - {x: 0.37735847, y: 0.13750005}
+          mode: 0
+          size: 96
+          hardness: 0.35
+          exposure: 0.25
+        brushSize: 96
+        brushHardness: 0.35
+        brushExposure: 0.25
+        brushMode: 0
+        wrap: 1
+    - rid: 2250680610667626752
+      type: {class: SeamBlendEffectData, ns: TextureLab.Editor, asm: TextureLab.Editor}
+      data:
+        id: e46fb716a6294d388b016fa2050def39
+        enabled: 1
+        expanded: 1
+        allowRandomize: 0
+        blendWidth: 0.098
+        blendStrength: 0.23
+        horizontal: 1
+        vertical: 1
+        blendAlpha: 0
+    - rid: 2250680610667626753
+      type: {class: ChannelRemapEffectData, ns: TextureLab.Editor, asm: TextureLab.Editor}
+      data:
+        id: 98d66a19b03e409bb83889ee1ee5f842
+        enabled: 1
+        expanded: 0
+        allowRandomize: 1
+        redOutput: {x: 0.26, y: -0.22, z: 0}
+        greenOutput: {x: 0, y: 1.02, z: 0}
+        blueOutput: {x: 0, y: -0.38, z: 0.42}
+        constants: {x: 0, y: 0, z: 0}
+        strength: 1
+        monochrome: 0
+        monochromeMix: {x: 0.2126, y: 0.7152, z: 0.0722}
+        monochromeConstant: 0
+        alphaMode: 0
+        alphaOutput: {x: 0, y: 0, z: 0, w: 1}
+        alphaConstant: 0
+    - rid: 2250680610667626754
+      type: {class: PaletteQuantizeEffectData, ns: TextureLab.Editor, asm: TextureLab.Editor}
+      data:
+        id: a958e75c803941729efe687bcfef1565
+        enabled: 1
+        expanded: 0
+        allowRandomize: 1
+        palette: {fileID: 11400000, guid: 625f070d92a0b1f4498bdc721722ec64, type: 2}
+        colorLimit: 0
+        extractionColorCount: 16
+    - rid: 2250680610667626755
+      type: {class: GaussianBlurEffectData, ns: TextureLab.Editor, asm: TextureLab.Editor}
+      data:
+        id: f31783650557445484d22a9e22207ae5
+        enabled: 1
+        expanded: 0
+        allowRandomize: 1
+        radius: 1.1
+        iterations: 1
+    - rid: 2250680610667626756
+      type: {class: PosterizeEffectData, ns: TextureLab.Editor, asm: TextureLab.Editor}
+      data:
+        id: 85725c87cc45445f938a787410bce150
+        enabled: 1
+        expanded: 0
+        allowRandomize: 1
+        redBits: 5
+        greenBits: 8
+        blueBits: 6
+    - rid: 2250680610667626757
+      type: {class: DitherEffectData, ns: TextureLab.Editor, asm: TextureLab.Editor}
+      data:
+        id: 0c4feb820098496986b6df2142b8854e
+        enabled: 1
+        expanded: 0
+        allowRandomize: 0
+        pattern: 2
+        strength: 0.11
+        scale: 3
+        seed: 52
+        channels: 1
+    - rid: 2250680610667626758
+      type: {class: NoiseEffectData, ns: TextureLab.Editor, asm: TextureLab.Editor}
+      data:
+        id: 2da348cdce774a6eabddaaca64eb339f
+        enabled: 1
+        expanded: 0
+        allowRandomize: 1
+        type: 0
+        amount: 0.31
+        scale: 1
+        seed: 3
+        channels: 0
+    - rid: 2250680610667626759
+      type: {class: PixelateEffectData, ns: TextureLab.Editor, asm: TextureLab.Editor}
+      data:
+        id: 0a550f3b684f496b94e2000fcc1ceca6
+        enabled: 1
+        expanded: 0
+        allowRandomize: 1
+        mode: 0
+        blockSize: 4
+        targetResolution: 128
+        sampling: 1

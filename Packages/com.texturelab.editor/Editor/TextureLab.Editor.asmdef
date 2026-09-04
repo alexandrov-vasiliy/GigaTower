@@ -1,0 +1,8 @@
+{
+  "name": "TextureLab.Editor",
+  "rootNamespace": "TextureLab.Editor",
+  "includePlatforms": [
+    "Editor"
+  ],
+  "autoReferenced": true
+}
