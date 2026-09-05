@@ -119,7 +119,7 @@ Transform:
   m_GameObject: {fileID: 2664014505858589302}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.3170013, z: 0}
+  m_LocalPosition: {x: 0, y: 1.1600037, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1721,7 +1721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e88afa15a4b0c4c42afbbf7d80666b41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FogObstacle
-  radius: 1.5
+  radius: 10
 --- !u!114 &2389674922384390272
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1750,9 +1750,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef5a7cfcb8cf464981d7aeb2e2f1e46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SurfaceFeedbackPlayer
-  commonFootstepFeedback: {fileID: 7849905689196989498}
+  commonFootstepFeedback: {fileID: 0}
   commonJumpTakeoffFeedback: {fileID: 0}
-  commonLandingFeedback: {fileID: 4251755129959652087}
+  commonLandingFeedback: {fileID: 0}
   surfaces:
   - surface: 0
     footstep: {fileID: 7849905689196989498}
@@ -1887,7 +1887,7 @@ Transform:
   m_GameObject: {fileID: 9055945597261057294}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.317, z: 0}
+  m_LocalPosition: {x: 0, y: 1.16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1931,7 +1931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3208323687753240275, guid: adb4b4791159bea41baaaa2c6dd579aa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.3169999
+      value: 1.1600037
       objectReference: {fileID: 0}
     - target: {fileID: 3208323687753240275, guid: adb4b4791159bea41baaaa2c6dd579aa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1995,6 +1995,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 3733588659454246221}
     m_Modifications:
+    - target: {fileID: 15899366994532107, guid: 8859632dc75a3ca49a41e2c3356c62b7, type: 3}
+      propertyPath: managedReferences[1659427258462372430].MaxPitch
+      value: 1.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 15899366994532107, guid: 8859632dc75a3ca49a41e2c3356c62b7, type: 3}
+      propertyPath: managedReferences[1659427258462372430].MinPitch
+      value: 0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 1553694700483477044, guid: 8859632dc75a3ca49a41e2c3356c62b7, type: 3}
+      propertyPath: m_Resource
+      value: 
+      objectReference: {fileID: 8300000, guid: d6d959eb1799a164e9302e486da0982a, type: 3}
     - target: {fileID: 1553694700483477044, guid: 8859632dc75a3ca49a41e2c3356c62b7, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
@@ -2043,6 +2055,34 @@ PrefabInstance:
       propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6325674023574028742, guid: 8859632dc75a3ca49a41e2c3356c62b7, type: 3}
+      propertyPath: managedReferences[8265003003785511192].RandomSfx.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6325674023574028742, guid: 8859632dc75a3ca49a41e2c3356c62b7, type: 3}
+      propertyPath: 'managedReferences[8265003003785511192].RandomSfx.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 3056523074ab1484a83c7ac1100c385f, type: 3}
+    - target: {fileID: 6325674023574028742, guid: 8859632dc75a3ca49a41e2c3356c62b7, type: 3}
+      propertyPath: 'managedReferences[8265003003785511192].RandomSfx.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d428ee45a0cb6a4bb60f65c00af41a6, type: 3}
+    - target: {fileID: 6325674023574028742, guid: 8859632dc75a3ca49a41e2c3356c62b7, type: 3}
+      propertyPath: 'managedReferences[8265003003785511192].RandomSfx.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 43ca33c169383cf4ebf5f8ca769b7172, type: 3}
+    - target: {fileID: 6325674023574028742, guid: 8859632dc75a3ca49a41e2c3356c62b7, type: 3}
+      propertyPath: 'managedReferences[8265003003785511192].RandomSfx.Array.data[6]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 9de65f2748a96d7408e61b6ac199c2af, type: 3}
+    - target: {fileID: 6325674023574028742, guid: 8859632dc75a3ca49a41e2c3356c62b7, type: 3}
+      propertyPath: 'managedReferences[8265003003785511192].RandomSfx.Array.data[7]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 4297183e445992e4890a3f04708c7450, type: 3}
+    - target: {fileID: 6325674023574028742, guid: 8859632dc75a3ca49a41e2c3356c62b7, type: 3}
+      propertyPath: 'managedReferences[8265003003785511192].RandomSfx.Array.data[8]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 7a23be7740cc0cb48b4ce72c6d8fac80, type: 3}
     - target: {fileID: 8671571420157684443, guid: 8859632dc75a3ca49a41e2c3356c62b7, type: 3}
       propertyPath: m_Name
       value: EarthHumanMovementFeedbacks
@@ -2146,6 +2186,14 @@ PrefabInstance:
     - target: {fileID: 4755151727984810668, guid: 3f8896c60579427428d0af8b00a0c777, type: 3}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6073693674145526675, guid: 3f8896c60579427428d0af8b00a0c777, type: 3}
+      propertyPath: managedReferences[1659427258462372430].MaxPitch
+      value: 0.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 6073693674145526675, guid: 3f8896c60579427428d0af8b00a0c777, type: 3}
+      propertyPath: managedReferences[1659427258462372430].MinPitch
+      value: 0.86
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
