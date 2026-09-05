@@ -252,6 +252,64 @@
     flex-direction: row;
 }
 
+.palette-picker {
+    flex-direction: row;
+    align-items: center;
+}
+
+.palette-picker-label {
+    width: 120px;
+    padding-left: 3px;
+}
+
+.palette-picker-button {
+    min-width: 0;
+    height: 24px;
+    flex-grow: 1;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 6px;
+    padding-right: 5px;
+}
+
+.palette-picker-name {
+    width: 104px;
+    overflow: hidden;
+    -unity-text-align: middle-left;
+}
+
+.palette-picker-preview {
+    height: 12px;
+    min-width: 36px;
+    flex-grow: 1;
+    flex-direction: row;
+    overflow: hidden;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-color: rgb(20, 22, 25);
+    border-right-color: rgb(20, 22, 25);
+    border-top-color: rgb(20, 22, 25);
+    border-bottom-color: rgb(20, 22, 25);
+    border-radius: 2px;
+}
+
+.palette-picker-preview.empty {
+    background-color: rgb(53, 56, 62);
+}
+
+.palette-picker-swatch {
+    min-width: 1px;
+    flex-grow: 1;
+}
+
+.palette-picker-arrow {
+    width: 14px;
+    margin-left: 5px;
+    -unity-text-align: middle-center;
+}
+
 .palette-actions > * {
     flex-grow: 1;
     margin-right: 3px;

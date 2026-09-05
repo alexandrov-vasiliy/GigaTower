@@ -794,18 +794,7 @@ namespace TextureLab.Editor
 
         private void AddPaletteFields(VisualElement root, PaletteQuantizeEffectData effect)
         {
-            var paletteField = new ObjectField("Palette")
-            {
-                objectType = typeof(TextureLabPalette),
-                allowSceneObjects = false,
-                value = effect.Palette
-            };
-            paletteField.RegisterValueChangedCallback(evt =>
-            {
-                EditEffect(effect, "Change Texture Lab Palette", () => effect.Palette = evt.newValue as TextureLabPalette);
-                effectList.Rebuild();
-            });
-            root.Add(paletteField);
+            root.Add(BuildPalettePicker(effect, out VisualElement palettePreview));
 
             var colorLimit = new IntegerField("Color Limit (0 = All)") { value = effect.ColorLimit };
             colorLimit.RegisterValueChangedCallback(evt =>
@@ -838,11 +827,84 @@ namespace TextureLab.Editor
             root.Add(colorCount);
 
             for (int i = 0; i < palette.Colors.Count; i++)
-                root.Add(BuildPaletteColorRow(effect, palette, i));
+                root.Add(BuildPaletteColorRow(effect, palette, i, palettePreview));
 
             var addColor = new Button(() => AddPaletteColor(effect, palette)) { text = "+ Color" };
             addColor.SetEnabled(palette.Colors.Count < 64);
             root.Add(addColor);
+        }
+
+        private VisualElement BuildPalettePicker(PaletteQuantizeEffectData effect, out VisualElement preview)
+        {
+            var row = new VisualElement();
+            row.AddToClassList("palette-picker");
+
+            var fieldLabel = new Label("Palette");
+            fieldLabel.AddToClassList("palette-picker-label");
+            row.Add(fieldLabel);
+
+            var button = new Button();
+            button.AddToClassList("palette-picker-button");
+
+            var name = new Label(effect.Palette != null ? effect.Palette.name : "None");
+            name.AddToClassList("palette-picker-name");
+            button.Add(name);
+
+            preview = new VisualElement();
+            preview.AddToClassList("palette-picker-preview");
+            RefreshPalettePreview(preview, effect.Palette);
+            button.Add(preview);
+
+            var arrow = new Label("▾");
+            arrow.AddToClassList("palette-picker-arrow");
+            button.Add(arrow);
+
+            button.clicked += () => ShowPalettePicker(button, effect);
+            row.Add(button);
+            return row;
+        }
+
+        private void ShowPalettePicker(VisualElement activator, PaletteQuantizeEffectData effect)
+        {
+            var palettes = new List<TextureLabPalette>();
+            foreach (string guid in AssetDatabase.FindAssets("t:TextureLabPalette"))
+            {
+                TextureLabPalette palette = AssetDatabase.LoadAssetAtPath<TextureLabPalette>(AssetDatabase.GUIDToAssetPath(guid));
+                if (palette != null && !palettes.Contains(palette))
+                    palettes.Add(palette);
+            }
+
+            palettes.Sort((left, right) => string.Compare(left.name, right.name, StringComparison.OrdinalIgnoreCase));
+
+            Rect activatorRect = activator.worldBound;
+            activatorRect.position += position.position;
+            UnityEditor.PopupWindow.Show(activatorRect, new PalettePickerPopup(palettes, effect.Palette, palette =>
+            {
+                if (effect.Palette == palette)
+                    return;
+
+                EditEffect(effect, "Change Texture Lab Palette", () => effect.Palette = palette);
+                effectList.Rebuild();
+            }));
+        }
+
+        private static void RefreshPalettePreview(VisualElement preview, TextureLabPalette palette)
+        {
+            preview.Clear();
+            if (palette == null)
+            {
+                preview.AddToClassList("empty");
+                return;
+            }
+
+            preview.RemoveFromClassList("empty");
+            foreach (Color color in palette.Colors)
+            {
+                var swatch = new VisualElement();
+                swatch.AddToClassList("palette-picker-swatch");
+                swatch.style.backgroundColor = color;
+                preview.Add(swatch);
+            }
         }
 
         private void AddColorReplaceFields(VisualElement root, ColorReplaceEffectData effect)
@@ -1219,7 +1281,11 @@ namespace TextureLab.Editor
             effect.Monochrome = true;
         }
 
-        private VisualElement BuildPaletteColorRow(PaletteQuantizeEffectData effect, TextureLabPalette palette, int index)
+        private VisualElement BuildPaletteColorRow(
+            PaletteQuantizeEffectData effect,
+            TextureLabPalette palette,
+            int index,
+            VisualElement palettePreview)
         {
             var row = new VisualElement();
             row.AddToClassList("palette-color-row");
@@ -1232,7 +1298,10 @@ namespace TextureLab.Editor
             };
             color.AddToClassList("palette-color-field");
             color.RegisterValueChangedCallback(evt =>
-                EditPalette(palette, "Change Palette Color", () => palette.Colors[index] = evt.newValue));
+            {
+                EditPalette(palette, "Change Palette Color", () => palette.Colors[index] = evt.newValue);
+                RefreshPalettePreview(palettePreview, palette);
+            });
             row.Add(color);
 
             var up = new Button(() => MovePaletteColor(effect, palette, index, index - 1)) { text = "↑", tooltip = "Move up" };
@@ -1250,6 +1319,103 @@ namespace TextureLab.Editor
             remove.SetEnabled(palette.Colors.Count > 1);
             row.Add(remove);
             return row;
+        }
+
+        private sealed class PalettePickerPopup : PopupWindowContent
+        {
+            private const float RowHeight = 28f;
+            private readonly List<TextureLabPalette> palettes;
+            private readonly TextureLabPalette selected;
+            private readonly Action<TextureLabPalette> select;
+            private Vector2 scroll;
+
+            internal PalettePickerPopup(
+                List<TextureLabPalette> palettes,
+                TextureLabPalette selected,
+                Action<TextureLabPalette> select)
+            {
+                this.palettes = palettes;
+                this.selected = selected;
+                this.select = select;
+            }
+
+            public override Vector2 GetWindowSize()
+            {
+                float contentHeight = RowHeight * (palettes.Count + 1) + 52f;
+                return new Vector2(360f, Mathf.Min(460f, contentHeight));
+            }
+
+            public override void OnGUI(Rect rect)
+            {
+                scroll = EditorGUILayout.BeginScrollView(scroll);
+                DrawPaletteRow(null, "None");
+                DrawPaletteGroup("Project Palettes", false);
+                DrawPaletteGroup("Built-in Palettes", true);
+                EditorGUILayout.EndScrollView();
+            }
+
+            private void DrawPaletteGroup(string title, bool builtIn)
+            {
+                bool drewHeader = false;
+                foreach (TextureLabPalette palette in palettes)
+                {
+                    bool isBuiltIn = AssetDatabase.GetAssetPath(palette).StartsWith("Packages/", StringComparison.Ordinal);
+                    if (isBuiltIn != builtIn)
+                        continue;
+
+                    if (!drewHeader)
+                    {
+                        GUILayout.Space(5f);
+                        GUILayout.Label(title, EditorStyles.miniBoldLabel);
+                        drewHeader = true;
+                    }
+
+                    DrawPaletteRow(palette, palette.name);
+                }
+            }
+
+            private void DrawPaletteRow(TextureLabPalette palette, string label)
+            {
+                Rect row = GUILayoutUtility.GetRect(1f, RowHeight, GUILayout.ExpandWidth(true));
+                bool isSelected = palette == selected;
+                bool isHovered = row.Contains(Event.current.mousePosition);
+                if (Event.current.type == EventType.Repaint && (isSelected || isHovered))
+                {
+                    Color background = isSelected
+                        ? new Color(0.22f, 0.43f, 0.68f, 0.8f)
+                        : new Color(1f, 1f, 1f, 0.07f);
+                    EditorGUI.DrawRect(row, background);
+                }
+
+                Rect checkRect = new Rect(row.x + 6f, row.y, 18f, row.height);
+                Rect nameRect = new Rect(checkRect.xMax, row.y, 126f, row.height);
+                Rect previewRect = new Rect(nameRect.xMax + 6f, row.y + 6f, row.xMax - nameRect.xMax - 14f, row.height - 12f);
+                GUI.Label(checkRect, isSelected ? "✓" : string.Empty);
+                GUI.Label(nameRect, new GUIContent(label, palette != null ? AssetDatabase.GetAssetPath(palette) : "No palette"));
+                DrawPaletteColors(previewRect, palette);
+
+                if (Event.current.type == EventType.MouseDown && Event.current.button == 0 && row.Contains(Event.current.mousePosition))
+                {
+                    select(palette);
+                    editorWindow.Close();
+                    Event.current.Use();
+                }
+            }
+
+            private static void DrawPaletteColors(Rect rect, TextureLabPalette palette)
+            {
+                EditorGUI.DrawRect(rect, new Color(0.12f, 0.12f, 0.12f));
+                if (palette == null || palette.Colors.Count == 0)
+                    return;
+
+                float swatchWidth = rect.width / palette.Colors.Count;
+                for (int i = 0; i < palette.Colors.Count; i++)
+                {
+                    float xMin = Mathf.Round(rect.x + swatchWidth * i);
+                    float xMax = Mathf.Round(rect.x + swatchWidth * (i + 1));
+                    EditorGUI.DrawRect(new Rect(xMin, rect.y, Mathf.Max(1f, xMax - xMin), rect.height), palette.Colors[i]);
+                }
+            }
         }
 
         private SliderInt IntSlider(string label, int value, int min, int max, Action<int> setter, TextureEffectData effect)
