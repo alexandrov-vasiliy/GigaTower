@@ -47,7 +47,7 @@ namespace TextureLab.Editor
         private Image brushCursorImage;
         private Vector2 brushCursorPosition;
 
-        [MenuItem("Tools/Texture Lab")]
+        [MenuItem("Tools/Texture Lab/Open Window")]
         private static void Open()
         {
             var window = GetWindow<TextureLabWindow>();
