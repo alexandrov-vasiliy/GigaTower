@@ -3,22 +3,7 @@ guid: f4c61775f03c16242934223b6bedf963
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Clif
-    second: {fileID: 2100000, guid: 927aea42f9ceb6b41a2b59a36d2c5a40, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Grass
-    second: {fileID: 2100000, guid: 1090f14bf72a5754293b9e495c76e108, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Moss
-    second: {fileID: 2100000, guid: 665b73fed2965d545b209fd7d1a11f2c, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
