@@ -37,11 +37,11 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Color_Steps: 64
-    - _Dither_Strength: 0.02
-    - _Pixel_Size: 2
-    - _Scan_Line: 0.06
-    - _Vignette: 0.25
+    - _Color_Steps: 1024
+    - _Dither_Strength: 0.1
+    - _Pixel_Size: 1
+    - _Scan_Line: 0.03
+    - _Vignette: 0
     m_Colors: []
   m_BuildTextureStacks: []
   m_AllowLocking: 1

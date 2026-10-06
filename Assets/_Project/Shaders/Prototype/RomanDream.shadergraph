@@ -39,6 +39,9 @@
         },
         {
             "m_Id": "9ed851e2a8334e0d92de85b332fcdc9f"
+        },
+        {
+            "m_Id": "e9bd3cb952014ae8953e0132fa807c2c"
         }
     ],
     "m_Nodes": [
@@ -5798,8 +5801,8 @@
     "m_ObjectId": "e514c6e77b9943259681e89c033311fc",
     "m_Title": "03  Perceptual colour / final blend",
     "m_Position": {
-        "x": -45.60003662109375,
-        "y": -560.7999267578125
+        "x": -45.60009765625,
+        "y": -560.8001098632813
     }
 }
 
@@ -5965,6 +5968,36 @@
 
 {
     "m_SGVersion": 0,
+    "m_Type": "UnityEditor.ShaderGraph.CategoryData",
+    "m_ObjectId": "e9bd3cb952014ae8953e0132fa807c2c",
+    "m_Name": "",
+    "m_ChildObjectList": [
+        {
+            "m_Id": "1eee9cc0895d4d6781969404228e62e2"
+        },
+        {
+            "m_Id": "c47537a653dc4eaf898d594a35eb8c73"
+        },
+        {
+            "m_Id": "e6af3b2344884caeb0fd4376a70bcaff"
+        },
+        {
+            "m_Id": "f192920fe23743f1b508415380fe2bc2"
+        },
+        {
+            "m_Id": "46885d4d9537480d8bb346edc7beafdc"
+        },
+        {
+            "m_Id": "b337fcd4ce284dac8de402c44c390ee8"
+        },
+        {
+            "m_Id": "124ff239b57540d69f1651c292a28a8b"
+        }
+    ]
+}
+
+{
+    "m_SGVersion": 0,
     "m_Type": "UnityEditor.ShaderGraph.DynamicValueMaterialSlot",
     "m_ObjectId": "eb6c9ffcddf94154934b7964b002a498",
     "m_Id": 0,
@@ -6038,8 +6071,8 @@
     "m_ObjectId": "ee592c0bb38c4d8c8f9411dd1ec3a0e1",
     "m_Title": "02  Film grain / pixel dither",
     "m_Position": {
-        "x": -2125.60009765625,
-        "y": 419.2000732421875
+        "x": -2125.600341796875,
+        "y": 419.2001037597656
     }
 }
 
@@ -6207,8 +6240,8 @@
     "m_ObjectId": "f613df04644642f997ba8e453ab75f33",
     "m_Title": "01  Pixel grid / aspect ratio",
     "m_Position": {
-        "x": -1975.199951171875,
-        "y": -530.39990234375
+        "x": -1975.2000732421875,
+        "y": -530.3999633789063
     }
 }
 

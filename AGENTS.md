@@ -6,9 +6,9 @@ These instructions apply to every prompt, including documentation-only tasks and
 
 1. Read `ARCHITECTURE.md` first. Treat it as the repository map, then inspect the files and call sites relevant to the request; the map is an orientation aid, not a substitute for source code.
 2. Work in the Unity project context: this is a Unity 6 project, so preserve Unity serialization, `.meta` files, scene/prefab references, component lifecycle, main-thread rules, and the distinction between Edit Mode and Play Mode.
-3. Before any project work, verify the `unityMCP` connection and the matching `GigaTower` Editor instance. Use Unity MCP for Unity Editor state, scenes, GameObjects, prefabs, assets, console, compilation, and Unity tests whenever the operation is supported.
-4. If Unity MCP is unavailable, disconnected, stale after a retry, or points at a different project, stop. Do not edit files or substitute shell/manual inspection for Unity operations; report the blocker and wait for the connection to be restored. Pure discussion that does not inspect or change the project is exempt.
-5. After changing code, scenes, prefabs, packages, or architecture, synchronize `ARCHITECTURE.md` in the same task. Do not update it for changes that do not affect the documented map. Verify the result through Unity MCP, including compilation and the smallest relevant test/check.
+3. Before project work, verify the matching `GigaTower` Editor instance with Unity CLI. Use Unity CLI for Editor state and supported operations; inspect project files when the CLI does not expose the needed information.
+4. If the matching Editor is unavailable or targets a different project, retry once, then report the blocker before making project changes. Pure discussion that does not inspect or change the project is exempt.
+5. After changing code, scenes, prefabs, packages, or architecture, synchronize `ARCHITECTURE.md` in the same task. Do not update it for changes that do not affect the documented map. Verify through Unity CLI, including compilation and the smallest relevant test/check when supported.
 
 ## Unity project context
 
@@ -45,6 +45,6 @@ Rules:
 - Pick the edge-case-correct option when two stdlib approaches are the same size, lazy means less code, not the flimsier algorithm.
 - Mark deliberate simplifications that cut a real corner with a known ceiling (global lock, O(n²) scan, naive heuristic) with a `ponytail:` comment naming the ceiling and upgrade path.
 
-Not lazy about: understanding the problem (read it fully and trace the real flow before picking a rung, a small diff you don't understand is just laziness dressed up as efficiency), input validation at trust boundaries, error handling that prevents data loss, security, accessibility, the calibration real hardware needs (the platform is never the spec ideal, a clock drifts, a sensor reads off), anything explicitly requested. Verify non-trivial logic with the smallest suitable check through Unity MCP. Add a persistent automated test or self-check only when explicitly requested.
+Not lazy about: understanding the problem (read it fully and trace the real flow before picking a rung, a small diff you don't understand is just laziness dressed up as efficiency), input validation at trust boundaries, error handling that prevents data loss, security, accessibility, the calibration real hardware needs (the platform is never the spec ideal, a clock drifts, a sensor reads off), anything explicitly requested. Verify non-trivial logic with the smallest suitable check through Unity CLI. Add a persistent automated test or self-check only when explicitly requested.
 
 (Yes, this file also applies to agents working on the ponytail repo itself. Especially to them.)

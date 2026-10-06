@@ -10,7 +10,7 @@ This is the mandatory first stop for repository work. It maps the current archit
 - Shared input asset: `Assets/InputSystem_Actions.inputactions`.
 - Render pipeline assets: `Assets/Settings` (URP PC/Mobile renderers and profiles).
 - Third-party/vendor roots: `Assets/Feel` (More Mountains Feel/Nice Vibrations), `Assets/Plugins/Demigiant` (DOTween), `Assets/Thirdparty`, `Assets/UModelerX-Hub`, and `Assets/Gridbox Prototype Materials`. Do not treat these as project-owned code.
-- Package inventory: `Packages/manifest.json`; notable packages are Unity MCP, URP, Input System, Cinemachine, AI Navigation, Terrain Tools, Timeline, uGUI, and Test Framework.
+- Package inventory: `Packages/manifest.json`; notable packages are Unity Pipeline CLI integration, URP, Input System, Cinemachine, AI Navigation, Terrain Tools, Timeline, uGUI, and Test Framework.
 - Embedded editor package: `Packages/com.texturelab.editor` contains Texture Lab, a Unity 6 GPU texture-processing tool. Its product plan remains at `Assets/TextureLab/Plan.md`.
 
 ## Gameplay map
