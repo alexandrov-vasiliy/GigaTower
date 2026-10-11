@@ -77,11 +77,15 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture_1:
-        m_Texture: {fileID: 2800000, guid: 91a983c3c2a140542be9729f68ef76bb, type: 3}
+        m_Texture: {fileID: 2800000, guid: b49bfea0b7a2aa042a6ec3eb8e7d3c41, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Texture_2:
         m_Texture: {fileID: 2800000, guid: 3a6e9f9416ca6b146a56d7d1ce78cc4e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _VertexDistortion_eb28e8a7d37647e69cf1a4541c805ab1_DistortionNoiseTex_3397442773_Texture2D:
+        m_Texture: {fileID: 2800000, guid: fdc54b69561e9e34583d00383cad8aa8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
@@ -131,6 +135,8 @@ Material:
     - _Noise_Power: 0.94
     - _OcclusionStrength: 1
     - _Parallax: 0.02
+    - _Pixel: 2048
+    - _Posterize: 128
     - _QueueControl: 0
     - _QueueOffset: 0
     - _ReceiveShadows: 1
